@@ -11,7 +11,7 @@ module.exports = {
                 // I would never put the url here in practice - should be read from env vars
                 const client = new MongoClient("mongodb+srv://api-manager:1cYBf4gVeFwEO2oC@cluster0.4b6ocab.mongodb.net/ourself?retryWrites=true&w=majority");
                 await client.connect();
-                connection = client.db();
+                connection = client.db('menu');
             }
 
             return connection;
