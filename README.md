@@ -10,6 +10,9 @@ To Lint: npm run lint
 
 Available Routes:
 
-http://localhost:3002/menu/appetizers
+Is this thing on?
+http://localhost:3002/health-check
 
-http://localhost:3002/menu/entrees
+Returns full menu
+http://localhost:3002/menu
+
