@@ -2,10 +2,10 @@ const chai = require('chai');
 const expect = require('chai').expect;
 const chaiHttp = require('chai-http');
 chai.use(chaiHttp);
-const server = require('../../app.js')
+const server = require('../../app.js');
 
 describe('routing tests for menu route', () => {
-    it('should sucessfully call /menu route ', done => {
+    it('should sucessfully call /menu route ', (done) => {
         chai.request(server)
             .get(`/menu`)
             .end( (err, res) => {
@@ -14,7 +14,7 @@ describe('routing tests for menu route', () => {
             });
     });
 
-    it('should sucessfully call /health-check route ', done => {
+    it('should sucessfully call /health-check route ', (done) => {
         chai.request(server)
             .get(`/health-check`)
             .end( (err, res) => {
@@ -23,7 +23,7 @@ describe('routing tests for menu route', () => {
             });
     });
 
-    it('should 404 if route does not exist', done => {
+    it('should 404 if route does not exist', (done) => {
         chai.request(server)
             .get(`/dfdfsdf`)
             .end( (err, res) => {
@@ -31,4 +31,4 @@ describe('routing tests for menu route', () => {
                 done();
             });
     });
-})
+});
